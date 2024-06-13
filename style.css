@@ -134,6 +134,7 @@ main {
   text-align: center;
   font-weight: 700;
   padding: 20px;
+  margin-top: 200px;
 }
 @media (max-width: 768px) {
   .main-nav {
