@@ -133,6 +133,7 @@ main {
   color: Red;
   text-align: center;
   font-weight: 700;
+  padding: 20px;
 }
 @media (max-width: 768px) {
   .main-nav {
