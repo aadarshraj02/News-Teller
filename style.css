@@ -3,3 +3,37 @@
   padding: 0;
   box-sizing: border-box;
 }
+
+:root {
+  --primary-text-color: #183b56;
+  --secondary-text-color: #577592;
+  --accent-color: #2294ed;
+  --accent-color-dark: #1d69a3;
+  --padding-inline-section: 20px;
+}
+
+body {
+  font-family: Verdana, Geneva, Tahoma, sans-serif;
+  color: var(--primary-text-color);
+}
+
+p {
+  font-family: "Times New Roman", Times, serif;
+  color: var(--secondary-text-color);
+  line-height: 1.4rem;
+}
+a {
+  text-decoration: none;
+}
+ul {
+  list-style: none;
+}
+.flex {
+  display: flex;
+  align-items: center;
+}
+.container {
+  max-width: 1200px;
+  margin-inline: auto;
+  overflow: hidden;
+}
