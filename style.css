@@ -93,7 +93,7 @@ main {
   margin-top: 80px;
 }
 
-.card-container {
+.cards-container {
   justify-content: space-between;
   row-gap: 20px;
   flex-wrap: wrap;
@@ -107,7 +107,7 @@ main {
   cursor: pointer;
   overflow: hidden;
   background-color: #fff;
-  transition: all0.3s ease;
+  transition: all 0.3s ease;
 }
 .card:hover {
   box-shadow: 1px 1px 8px #bbd0e2;
@@ -124,4 +124,7 @@ main {
 }
 .news-src {
   margin-block: 12px;
+}
+.nav-item.active {
+  color: var(--accent-color);
 }

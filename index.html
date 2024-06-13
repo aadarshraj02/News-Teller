@@ -10,12 +10,30 @@
   <body>
     <nav>
       <div class="main-nav container flex">
-        <a href="#">News Today</a>
+        <a href="#" onclick="reload()">News Today</a>
         <div class="nav-links">
           <ul class="flex">
-            <li class="hover-link nav-item">Cricket</li>
-            <li class="hover-link nav-item">Finance</li>
-            <li class="hover-link nav-item">Politics</li>
+            <li
+              class="hover-link nav-item"
+              id="cricket"
+              onclick="onNavItemClick('cricket')"
+            >
+              Cricket
+            </li>
+            <li
+              class="hover-link nav-item"
+              id="finance"
+              onclick="onNavItemClick('finance')"
+            >
+              Finance
+            </li>
+            <li
+              class="hover-link nav-item"
+              id="politics"
+              onclick="onNavItemClick('politics')"
+            >
+              Politics
+            </li>
           </ul>
         </div>
         <div class="search-bar flex">
@@ -30,16 +48,12 @@
     <template id="template-news-card">
       <div class="card">
         <div class="card-header">
-          <img src="" alt="" />
+          <img src="" alt="" id="news-img" />
         </div>
         <div class="card-content">
-          <h3 class="news-title" id="news-title">
-            This is the title
-            <h6 class="news-src" id="news-src">
-              AAnything...
-              <p class="news-desc" id="news-desc">lorem</p>
-            </h6>
-          </h3>
+          <h3 class="news-title" id="news-title">This is the title</h3>
+          <h6 class="news-src" id="news-src">AAnything...</h6>
+          <p class="news-desc" id="news-desc">lorem</p>
         </div>
       </div>
     </template>
