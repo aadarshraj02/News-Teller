@@ -128,6 +128,12 @@ main {
 .nav-item.active {
   color: var(--accent-color);
 }
+.error {
+  font-size: 1.5rem;
+  color: Red;
+  text-align: center;
+  font-weight: 700;
+}
 @media (max-width: 768px) {
   .main-nav {
     flex-direction: column;
