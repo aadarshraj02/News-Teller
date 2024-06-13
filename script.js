@@ -11,10 +11,18 @@ function reload() {
 window.addEventListener("load", () => fetchNews("India"));
 
 async function fetchNews(query) {
-  const response = await fetch(`${url}${query}&apiKey=${API_KEY}`);
-  const data = await response.json();
-  console.log(data);
-  bindData(data.articles);
+  try {
+    const response = await fetch(`${url}${query}&apiKey=${API_KEY}`);
+    const data = await response.json();
+
+    if (data.articles && data.articles.length > 0) {
+      bindData(data.articles);
+    } else {
+      showError();
+    }
+  } catch (error) {
+    showError();
+  }
 }
 
 function bindData(articles) {
@@ -51,6 +59,13 @@ function fillDataInCard(cardsClone, article) {
     window.open(article.url, "_blank");
   });
 }
+
+function showError() {
+  const cardsContainer = document.querySelector(".cards-container");
+  cardsContainer.innerHTML =
+    "<p class = 'error'>No news found for the given query. Please try again.</p>";
+}
+
 let currentSelectedNav = null;
 
 function onNavItemClick(id) {
@@ -62,7 +77,7 @@ function onNavItemClick(id) {
 }
 
 searchBtn.addEventListener("click", () => {
-  const query = searchText.value;
+  const query = newsInput.value;
   if (!query) return;
   fetchNews(query);
   currentSelectedNav?.classList.remove("active");
